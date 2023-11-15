@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+
 // レスポンスのデータ（ノート全件）
 const responseObjectDataAll = {
 textObject1 : {
@@ -15,6 +16,7 @@ subTitle: 'ノート２のサブタイトルです',
 bodyText: 'ノート２の本文です'
 },
 };
+
 /**
 * メモを全件取得するAPI
 * @returns {Object[]} data
@@ -26,4 +28,5 @@ router.get('/', function (req, res, next) {
 // 全件取得して返す
 res.json(responseObjectDataAll);
 })
+
 module.exports = router;
