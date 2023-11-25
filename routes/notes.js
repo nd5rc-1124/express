@@ -3,7 +3,7 @@ var router = express.Router();
 
 // 接続情報を設定
 const { MongoClient } = require("mongodb");
-### (Access Information is Deleted) ###
+// Access Information is Deleted
 const client = new MongoClient(uri);
 
 router.get('/', async (req, res) => {
