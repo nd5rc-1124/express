@@ -12,9 +12,11 @@ const database = client.db('notes');
 const notes = database.collection('notes');
 
 // idが１のドキュメントを取得
-const query = { id: 2 };
-const note = await notes.findOne(query);
-res.json(note);
+//const query = { id: 1 };
+const query = {};
+//const note = await notes.findOne(query);
+const notesArray = await notes.find(query).toArray();
+res.json(notesArray);
 })
 
 module.exports = router;
